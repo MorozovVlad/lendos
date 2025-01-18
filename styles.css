@@ -22,6 +22,14 @@
     max-width: 1304px;
   }
 }
+@media (max-width: 1300px) {
+  header {
+    padding-left: 20px;
+  }
+  .r-b {
+    margin-right: 40px;
+  }
+}
 @media (min-width: 970px) {
   .mid-container {
     margin: 0 auto;
@@ -242,6 +250,9 @@ header .header-box .right button:hover {
 }
 .content-block h2 {
   text-align: center;
+}
+.content-block .registration-form {
+  margin-bottom: 50px;
 }
 .content-block .registration-form button {
   background-color: #0066cc;

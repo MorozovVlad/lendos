@@ -26,6 +26,14 @@ $border-radius: 5px;
     max-width: 1304px;
   }
 }
+@media (max-width: 1300px) {
+  header {
+    padding-left: 20px;
+  }
+  .r-b {
+    margin-right: 40px;
+  }
+}
 @media (min-width: 970px) {
   .mid-container {
     margin: 0 auto;
@@ -259,6 +267,7 @@ header {
     text-align: center;
   }
   .registration-form {
+    margin-bottom: 50px;
     button {
       background-color: #0066cc;
       color: #fff;
