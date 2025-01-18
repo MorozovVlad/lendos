@@ -1,0 +1,313 @@
+$primary-color: white;
+$secondary-color: #444;
+$button-padding: 10px 15px;
+$border-radius: 5px;
+@font-face {
+  font-family: "UOLText";
+  src: url("img/uol-text-regular.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "UOLText2";
+  src: url("img/uol-text-bold.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+@media screen and (min-width: 1336px) {
+  .header-box {
+    margin: 0 auto;
+    max-width: 1304px;
+  }
+  .footer-box {
+    margin: 0 auto;
+    max-width: 1304px;
+  }
+}
+@media (min-width: 970px) {
+  .mid-container {
+    margin: 0 auto;
+    max-width: 796px;
+  }
+  .body-container {
+    margin: 0 auto;
+    max-width: 640px;
+  }
+}
+@media (max-width: 768px) {
+  header .header-box .center {
+    display: none !important;
+  }
+  header {
+    padding-left: 20px;
+  }
+  .hover-effect2 {
+    display: none !important;
+  }
+  .r-b {
+    margin-right: 40px;
+  }
+  .r-b-2 {
+    display: none;
+  }
+  .footer-box {
+    padding: 20px;
+    flex-direction: column;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 768px) {
+}
+body {
+  font-family: "UOLText";
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  border-bottom: 1px solid rgb(234, 234, 234);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  .header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    background-color: $primary-color;
+    color: black;
+    height: 50px;
+    .left {
+      display: flex;
+      align-items: center;
+      .hover-effect:hover {
+        color: #920013; // Новый цвет при наведении
+        cursor: pointer; // Указатель курсора при наведении
+      }
+
+      .menu-btn {
+        background-color: $secondary-color;
+        border: none;
+        color: black;
+        padding: $button-padding;
+        cursor: pointer;
+        margin-right: 20px;
+        border-radius: $border-radius;
+
+        &:hover + .menu {
+          display: block;
+        }
+      }
+
+      .logo {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .menu {
+        display: none;
+        position: absolute;
+        background-color: $primary-color;
+        border: 1px solid $secondary-color;
+        width: 200px;
+        top: 50px;
+        left: 20px;
+        z-index: 10;
+
+        a {
+          color: black;
+          padding: $button-padding;
+          text-decoration: none;
+          display: block;
+
+          &:hover {
+            background-color: $secondary-color;
+          }
+        }
+      }
+    }
+    .center {
+      display: flex;
+      gap: 5px;
+      button {
+        background-color: transparent;
+        padding: $button-padding;
+        border: none;
+        cursor: pointer;
+        border-radius: $border-radius;
+        font-family: "UOLText";
+        font-weight: 500;
+        font-size: 16px;
+        .hover-effect:hover {
+          color: #920013;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .right {
+      font-family: "UOLText2";
+      .hover-effect2:hover {
+        color: #920013;
+        cursor: pointer;
+      }
+      button {
+        background-color: #ffce00;
+        font-family: "UOLText2";
+        padding: $button-padding;
+        border: none;
+        cursor: pointer;
+        border-radius: $border-radius;
+        height: 40px;
+        margin-left: 20px;
+        font-size: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 8px;
+        .hover-effect:hover {
+          color: #920013;
+          cursor: pointer;
+        }
+      }
+      button:hover {
+        background-color: #d7ac01;
+      }
+    }
+  }
+}
+.content-block {
+  width: 90%;
+  max-width: 640px;
+  margin: 0 auto;
+  border-radius: 8px;
+  text-align: left;
+  .dis {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #d6001e;
+  }
+  .dis:hover {
+    color: #aa0017;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    margin-top: 0;
+  }
+  .info {
+    display: flex;
+    justify-content: space-between;
+    .dis-1 {
+      margin-top: 0px;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .icons {
+      width: 144px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .time {
+    font-size: 14px;
+    color: #666;
+    margin-top: 0;
+  }
+  .content {
+    overflow: hidden;
+    .text {
+      margin-bottom: 20px;
+      font-size: 20px;
+      line-height: 32px;
+      margin-top: 10px;
+    }
+
+    .image {
+      float: right;
+      width: 48%;
+      margin-left: 30px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    .caption {
+      margin-left: 25px;
+      border-left: #d6001e 2px solid;
+      float: right;
+      width: 45%;
+      padding-left: 20px;
+      font-size: 14px;
+      margin-top: 10px;
+      line-height: 24px;
+      p {
+        color: #666;
+        margin-top: 0;
+        margin-bottom: 0px;
+      }
+    }
+  }
+  h2 {
+    text-align: center;
+  }
+  .registration-form {
+    button {
+      background-color: #0066cc;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+      width: 100%;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+    .form-group {
+      label {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 5px;
+        display: block;
+        margin-top: 25px;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+footer {
+  background-color: #f2f2f2;
+  font-size: 14px;
+  .footer-box {
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    align-items: center;
+    .hover-effect:hover {
+      color: #7b0010;
+      cursor: pointer;
+    }
+    .hover-effect {
+      color: #d6001e;
+    }
+    svg {
+      margin-left: 15px;
+    }
+  }
+}
